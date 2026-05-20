@@ -1,0 +1,3 @@
+## 2024-05-20 - [A11y SVG Attributes]
+**Learning:** Decorative inline SVGs used next to text links are read poorly or completely ignored by screen readers in inconsistent ways. Informative SVGs without `role="img"` or `aria-label` are inaccessible.
+**Action:** Always add `aria-hidden="true"` to purely decorative SVGs. Always add `role="img"` and `aria-label` to standalone informative SVGs like logos.
