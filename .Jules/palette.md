@@ -1,0 +1,3 @@
+## 2024-03-24 - Default Laravel Welcome Page SVGs
+**Learning:** Default Laravel Blade templates use extensive inline SVGs for layout/icons but miss crucial ARIA attributes. Main logos lack `role="img"` and `aria-label`, making them completely invisible to screen readers, while decorative icons lack `aria-hidden="true"`, causing screen readers to announce them confusingly or pause on unlabelled graphics.
+**Action:** Always audit inline SVGs in template files. Apply `role="img" aria-label="..."` for informative SVGs and `aria-hidden="true"` for purely decorative ones to ensure a clean screen reader experience.
