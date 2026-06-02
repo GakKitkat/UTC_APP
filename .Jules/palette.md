@@ -1,0 +1,3 @@
+## 2024-06-02 - Default Laravel Welcome Page SVGs
+**Learning:** The default `welcome.blade.php` in Laravel projects uses inline SVGs for its main logo and decorative icons but lacks proper ARIA labels. This causes screen readers to either announce complex SVG paths or ignore them completely without context.
+**Action:** When working with default Laravel boilerplates or any inline SVGs without text equivalents, always audit them to ensure meaningful SVGs have `role="img"` and `aria-label`, and decorative SVGs have `aria-hidden="true"`.
