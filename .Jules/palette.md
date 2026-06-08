@@ -1,0 +1,3 @@
+## 2024-06-08 - SVG Accessibility in Default Laravel View
+**Learning:** Default Laravel `welcome.blade.php` uses inline SVGs for logos and icons. While visually appealing, they lack intrinsic semantic meaning for screen readers. The main logo was completely invisible to assistive tech, and decorative icons added noisy clutter since they were adjacent to text links.
+**Action:** When working with inline SVGs, always explicitly determine their role. If informative (like a main logo), use `role="img"` and `aria-label="[Description]"`. If purely decorative (like icons next to text links), use `aria-hidden="true"` to hide them from the accessibility tree and reduce noise.
