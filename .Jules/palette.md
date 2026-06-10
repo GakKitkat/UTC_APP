@@ -1,0 +1,3 @@
+## 2024-05-18 - Click Targets and Focus States
+**Learning:** Wrapping text and icons in a single `<a>` tag significantly improves the click area, improving Fitts Law metrics. Combining `focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500` ensures a visible focus state for keyboard users, which was completely missing before. Decorative SVGs should always have `aria-hidden="true"`.
+**Action:** When evaluating links with adjacent icons, always wrap them together. Ensure all interactive elements have explicit focus states, especially on default Laravel welcome pages where they might be missing.
