@@ -1,0 +1,3 @@
+## 2024-06-14 - Laravel SVG Icons Accessibility
+**Learning:** The default Laravel starter view (`welcome.blade.php`) ships with many SVGs. The main framework logo acts as an important structural image but lacks `role="img"` and `aria-label`, meaning screen readers skip it or don't announce what it is. Conversely, the smaller icons (Documentation, Laracasts, etc.) are purely decorative and should have `aria-hidden="true"` so screen readers skip over the complex path data rather than reciting useless coordinates.
+**Action:** Always verify if SVGs are structural (need roles and labels) or decorative (need `aria-hidden="true"`). Don't assume default starter templates are fully accessible.
