@@ -1,0 +1,3 @@
+## 2025-02-27 - Laravel Boilerplate SVG Accessibility
+**Learning:** Default Laravel boilerplate uses raw SVGs for logos and icons without ARIA labels (`aria-label`) or roles (`role="img"`), causing poor screen reader experience where complex internal SVG paths might be parsed or omitted without context.
+**Action:** Always verify decorative vs. meaningful SVGs in new templates. Add `role="img"` and `aria-label="[Description]"` to meaningful SVGs (like the main logo), and `aria-hidden="true"` to purely decorative SVGs so screen readers skip them cleanly.
