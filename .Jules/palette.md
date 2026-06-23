@@ -1,0 +1,3 @@
+## 2024-03-20 - Fitts's Law on Footer Links
+**Learning:** Found a structural pattern in the standard Laravel Welcome blade where decorative icons are placed adjacent to, but outside of, the text anchor tags in flex containers. This visually groups them but logically separates them, resulting in a small clickable hit area (just the text) and unnecessary screen reader announcements for the SVG.
+**Action:** Always verify if adjacent icons and text are meant to act as a single logical button/link. When they are, wrap both inside the `<a>` or `<button>` tag to expand the clickable area (applying Fitts's Law) and add `aria-hidden="true"` to the decorative icon to clean up the accessibility tree.
