@@ -1,0 +1,3 @@
+## 2024-03-01 - Hidden Decorative SVGs
+**Learning:** Found multiple instances of complex decorative inline SVGs that were fully exposed to screen readers without ARIA roles, labels, or `aria-hidden` attributes. This can cause redundant or confusing noise for assistive technology users reading the page content.
+**Action:** Always ensure decorative images/SVGs explicitly use `aria-hidden="true"`, and meaningful images/SVGs use `role="img"` and `aria-label`.
