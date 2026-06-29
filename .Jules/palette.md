@@ -1,0 +1,3 @@
+## 2024-06-29 - Combine Clickable Targets with a11y Tags
+**Learning:** Separate adjacent icon and text links describing the same action (like a link to a sponsor page or shop) create redundant tab stops for screen readers and smaller interactive areas for mouse users. Grouping the icon and text under a single `<a>` tag with `flex` preserves visual layout while applying Fitts's Law to increase the click target. Applying `aria-hidden="true"` to the decorative icon also eliminates redundancy for screen reader users.
+**Action:** Always wrap adjacent icon and text links that point to the same destination in a single clickable container, and hide decorative SVG icons from screen readers.
