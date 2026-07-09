@@ -1,0 +1,3 @@
+## 2024-05-24 - Interactive area for links with icons
+**Learning:** Having an icon physically adjacent to a text link but outside its `<a href>` tag causes the icon to be unclickable, creating a poor user experience. Additionally, screen readers won't properly associate the icon with the link if it's placed outside and not explicitly hidden or labelled.
+**Action:** Always wrap both the icon and the text within the `<a>` tag for cohesive clickable areas. Use utility classes like `flex items-center` for proper alignment. Use `aria-hidden="true"` on decorative icons so screen readers focus only on the descriptive text.
