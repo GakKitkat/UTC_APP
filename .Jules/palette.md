@@ -1,0 +1,3 @@
+## 2024-07-11 - Explicit ARIA Handling for Decorative SVGs in Default Templates
+**Learning:** Default framework templates (like Laravel's welcome view) often rely on purely decorative SVG icons without explicitly setting `aria-hidden="true"`. This causes screen readers to announce unhelpful or confusing information to users.
+**Action:** When working on default views or components that heavily utilize inline SVGs for layout/decoration, always audit for missing `aria-hidden="true"` on decorative elements and ensure primary informative SVGs (like logos) have explicit `role="img"` and `aria-label`.
