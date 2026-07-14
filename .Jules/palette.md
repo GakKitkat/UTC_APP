@@ -1,0 +1,3 @@
+## 2023-07-14 - Default Laravel Welcome Template Lacks SVG Accessibility
+**Learning:** The default Laravel welcome page template (`welcome.blade.php`) uses inline SVGs for the main logo and decorative icons. These SVGs lack essential accessibility attributes. The main logo missing `role="img"` and `aria-label` makes it invisible to screen readers, while the decorative icons missing `aria-hidden="true"` can cause redundant or confusing announcements, impacting the experience for assistive technology users.
+**Action:** When working with or generating default templates, always review inline SVGs. Ensure informative SVGs have `role="img"` and an `aria-label`, and decorative SVGs have `aria-hidden="true"`.
