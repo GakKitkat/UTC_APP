@@ -1,0 +1,3 @@
+## 2024-10-24 - Unclickable Decorative Icons Next to Links
+**Learning:** Having an unclickable decorative icon right next to a link is a common pattern that reduces the clickable hit area, leading to frustrated users when they accidentally click the icon instead of the link text. Main decorative SVGs are also commonly missing ARIA labels.
+**Action:** Always wrap adjacent icons inside the link's anchor tag, apply `flex items-center` to the anchor for layout, and add `aria-hidden="true"` to decorative SVGs so screen readers skip them but sighted users get the visual cue. Ensure main meaningful SVGs have `role="img"` and an `aria-label`.
