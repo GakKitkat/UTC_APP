@@ -1,0 +1,3 @@
+## 2024-07-31 - Disconnected Icons Near Links Reduce Target Area and Split Focus
+**Learning:** Decorative icons placed near links (but outside the `<a>` tag) force users to click exactly on the text to trigger the action, reducing the clickable hit area (violating Fitts's Law). Additionally, it causes keyboard users to only see the text highlighted during focus, which looks unpolished and disconnected.
+**Action:** Always wrap adjacent icons inside the interactive element (`<a>` or `<button>`), add `aria-hidden="true"` to the decorative icon, and apply `flex items-center` to the wrapper to maintain layout while increasing the target area and creating a unified focus state.
