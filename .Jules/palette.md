@@ -1,0 +1,3 @@
+## 2024-05-15 - Expanding Hit Areas for Links with Decorative Icons
+**Learning:** In the default Laravel welcome page, the clickable hit area for primary links (Documentation, Laracasts, Laravel News) was limited to just the text, leaving the adjacent prominent icons unclickable. This is a common pattern that creates a poor experience for mouse and touch users who expect the entire "block" or visual row to be clickable.
+**Action:** When a link has a prominent adjacent decorative icon, wrap both the icon and the text within the `<a>` tag to maximize the clickable hit area, and add `aria-hidden="true"` to the decorative icon to ensure screen readers don't read it out unnecessarily.
