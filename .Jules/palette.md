@@ -1,0 +1,3 @@
+## 2024-08-04 - Screen Reader Compatibility with Inline SVGs in Laravel Views
+**Learning:** In standard Laravel Blade templates (like `welcome.blade.php`), inline SVGs used for decorative purposes or main branding often lack semantic accessibility attributes. The main logo was entirely invisible to screen readers, while decorative icons (Documentation, Laracasts, etc.) could potentially clutter screen reader output if not explicitly hidden.
+**Action:** When working with Blade templates in this app, proactively add `role="img"` and `aria-label="[Description]"` to informative/brand SVGs. Always append `aria-hidden="true"` to decorative SVGs accompanying text links to ensure a clean screen reader experience without duplicating information.
