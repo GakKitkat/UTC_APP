@@ -1,0 +1,3 @@
+## 2025-03-01 - Hiding Decorative SVGs and Labeling Informative Ones
+**Learning:** Screen readers struggle with raw SVGs. Decorative SVGs (like icons next to descriptive text links) add unnecessary noise for screen reader users and should be explicitly hidden using `aria-hidden="true"`. Conversely, informative SVGs (like a main brand logo without surrounding descriptive text) must be labeled using `role="img"` and `aria-label="[Description]"` to ensure the content is conveyed correctly.
+**Action:** When implementing icons or standalone graphics, immediately evaluate if they are decorative (adds no new information) or informative (conveys meaning). Apply `aria-hidden="true"` or `role="img"` with an `aria-label` accordingly.
