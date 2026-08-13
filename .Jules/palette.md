@@ -1,0 +1,3 @@
+## 2024-05-18 - Standardized SVG Accessibility in Blade Templates
+**Learning:** Screen readers often announce inline SVGs as "image" or read raw code if not hidden. In Laravel blade templates, mixing informative (like the main logo) and decorative SVGs (icons for links) without standard attributes causes accessibility noise and confusion.
+**Action:** Always explicitly label informative SVGs with `role="img"` and a descriptive `aria-label`. For decorative SVGs used alongside text links (e.g. Documentation, Laracasts, Shop icons), always apply `aria-hidden="true"` so screen readers skip them and rely on the adjacent link text.
