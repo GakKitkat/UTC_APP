@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility for Mixed SVG Types in Laravel Templates
+**Learning:** Laravel's default blade templates (like `welcome.blade.php`) often mix informative SVGs (the main logo) and purely decorative SVGs (icons for documentation, links, etc.) without semantic distinction. This causes screen readers to either ignore important branding or redundantly announce decorative shapes.
+**Action:** Always audit SVGs in standard templates. Apply `role="img"` and `aria-label` to informative SVGs (like logos), and apply `aria-hidden="true"` to purely decorative SVGs to ensure a clean and meaningful screen reader experience.
