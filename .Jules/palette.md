@@ -1,0 +1,3 @@
+## 2024-11-06 - Inline SVG Accessibility in Laravel Templates
+**Learning:** Default Laravel Blade templates (like `welcome.blade.php`) often contain inline `<svg>` elements used for both branding and decoration that lack necessary accessibility attributes. Without them, screen readers may either ignore important branding (the main logo) or unnecessarily announce decorative SVGs (like icons next to text links), leading to a confusing experience.
+**Action:** Always verify inline SVGs. Add `role="img"` and an `aria-label` to meaningful SVGs (like logos), and explicitly add `aria-hidden="true"` to purely decorative SVGs to ensure they are skipped by assistive technologies.
