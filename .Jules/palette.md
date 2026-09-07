@@ -1,0 +1,3 @@
+## 2024-09-07 - Inline SVG Accessibility in Blade Templates
+**Learning:** This application makes heavy use of inline SVGs for both decorative icons (e.g. documentation links) and informative imagery (e.g. the main Laravel logo) in Blade templates. The initial implementation lacked appropriate ARIA roles and labels, meaning screen readers would likely announce confusing or missing information for the informative logo and unnecessary noise for the decorative icons.
+**Action:** When working with inline SVGs in Blade templates, always ensure they are explicitly marked. Use `role="img"` and `aria-label="[Description]"` for informative SVGs, and `aria-hidden="true"` for decorative ones. This pattern should be applied proactively to any new UI components containing SVGs.
