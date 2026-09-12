@@ -1,0 +1,3 @@
+## 2025-03-05 - Inline SVG Accessibility
+**Learning:** In Blade templates (like `welcome.blade.php`), inline `<svg>` elements often lack inherent semantic meaning or screen reader text, leading to confusing or silent experiences for assistive tech. This is a common accessibility gap in default Laravel scaffoldings where SVGs are used heavily for decoration or branding.
+**Action:** Always categorize inline `<svg>` elements. If they are informative (like a logo), explicitly set `role="img"` and an `aria-label`. If they are decorative icons next to text, explicitly set `aria-hidden="true"` so they are properly ignored by screen readers.
