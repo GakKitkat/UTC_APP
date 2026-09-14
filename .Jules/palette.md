@@ -1,0 +1,3 @@
+## 2024-09-14 - Inline SVG Accessibility in Laravel Blade Templates
+**Learning:** Found a specific pattern in this application's Blade templates where inline `<svg>` elements were completely lacking ARIA attributes. Informative SVGs (like the main Laravel logo) lacked `role="img"` and `aria-label`, making them invisible or poorly announced to screen readers. Decorative SVGs (icons next to text links) lacked `aria-hidden="true"`, causing screen readers to potentially announce useless information.
+**Action:** Always inspect inline SVGs in Blade templates. Apply `role="img"` and `aria-label` to informative SVGs, and `aria-hidden="true"` to decorative ones, to ensure proper screen reader flow.
