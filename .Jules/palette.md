@@ -1,0 +1,3 @@
+## 2024-09-18 - Screen Reader Clutter from Decorative SVGs
+**Learning:** Inline SVGs, even when part of a larger link block with descriptive text (like Laravel's ecosystem links), can be interpreted as separate, confusing elements by screen readers if they lack `aria-hidden="true"`. Conversely, a purely visual, unlinked logo needs an explicit `role="img"` and `aria-label` to be understood, rather than just being skipped or announced as a generic path.
+**Action:** Always audit inline SVGs to determine if they are informative (requiring `role="img"` and `aria-label`) or decorative (requiring `aria-hidden="true"`), especially when updating default templates or landing pages.
