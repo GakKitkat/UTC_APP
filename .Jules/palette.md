@@ -1,0 +1,3 @@
+## 2024-09-20 - SVG Accessibility in Blade Templates
+**Learning:** Decorative inline `<svg>` elements used as icons (such as those in `welcome.blade.php`) should have `aria-hidden="true"` so that screen readers skip them instead of reading out confusing technical element names.
+**Action:** Always ensure inline SVGs have either `aria-hidden="true"` (if decorative) or an `aria-label` and `role="img"` (if informative) for proper screen reader flow.
