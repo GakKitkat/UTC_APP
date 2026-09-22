@@ -1,0 +1,3 @@
+## 2024-10-27 - Laravel Boilerplate SVGs Lack Accessibility Labels
+**Learning:** Default Laravel installations often include multiple decorative and informational inline SVGs (like the Laravel logo and generic icons) in `welcome.blade.php` that lack `aria-hidden` or `aria-label`/`role="img"` attributes, causing screen readers to read raw HTML or skip important context.
+**Action:** When working on new Laravel projects or auditing existing ones, check boilerplate templates for inline SVGs and explicitly apply accessibility attributes to improve navigation flow and convey essential visual branding.
