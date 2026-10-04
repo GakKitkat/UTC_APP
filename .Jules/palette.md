@@ -1,0 +1,3 @@
+## 2024-03-24 - Accessibility improvements for inline SVGs in Blade templates
+**Learning:** Found that the default Laravel starter template (`welcome.blade.php`) contains several inline `<svg>` elements used both as informative logos and decorative icons without appropriate ARIA attributes. This causes screen readers to either announce complex paths unhelpfully or skip important visual context.
+**Action:** Always verify inline SVGs. Ensure informative SVGs get `role="img"` and `aria-label`, and decorative SVGs get `aria-hidden="true"` to prevent screen reader clutter. Applied this across all 7 SVGs in the welcome page to establish a solid baseline for screen reader users.
