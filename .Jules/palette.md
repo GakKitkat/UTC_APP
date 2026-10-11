@@ -1,0 +1,3 @@
+## 2023-10-27 - SVG Accessibility in Blade Templates
+**Learning:** Decorative inline SVGs in Blade templates often lack `aria-hidden="true"`, while informative SVGs lack `role="img"` and `aria-label`. This pattern was observed across multiple icons in the default Laravel welcome page, impacting screen reader flow.
+**Action:** Always verify inline `<svg>` elements in Blade components and templates. Add `aria-hidden="true"` to decorative icons, and ensure meaningful logos/graphics have `role="img"` with an appropriate `aria-label`.
