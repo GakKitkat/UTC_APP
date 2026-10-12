@@ -1,0 +1,3 @@
+## 2024-05-24 - Screen Reader SVG Traps
+**Learning:** Decorative inline `<svg>` elements without `aria-hidden="true"` or an explicit `role="img"` with an `aria-label` often confuse screen readers. They may attempt to read the raw SVG paths or pause unpredictably, causing a poor accessibility experience.
+**Action:** When adding inline SVG icons purely for visual purposes, ALWAYS include `aria-hidden="true"`. If the SVG conveys meaningful information, use `role="img"` and `aria-label="[Description]"`.
