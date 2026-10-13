@@ -1,0 +1,3 @@
+## 2023-10-24 - SVG Accessibility in Laravel Default Template
+**Learning:** Default Laravel Blade templates (`welcome.blade.php`) often contain inline SVGs for layout and decoration without proper accessibility roles, which can disrupt screen reader flows. Specifically, decorative SVGs lack `aria-hidden="true"`, and the main logo SVG lacks `role="img"` and `aria-label`.
+**Action:** Always verify inline SVGs in boilerplate and add `aria-hidden="true"` to decorative ones, and `role="img"` with an appropriate `aria-label` to informative ones.
