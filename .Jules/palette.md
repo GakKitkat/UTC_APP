@@ -1,0 +1,3 @@
+## 2024-10-14 - Add aria-hidden to decorative SVGs
+**Learning:** Screen readers will unnecessarily try to announce inline SVG elements unless they are explicitly hidden or have proper ARIA labels. In generic UI components like default Laravel welcome pages, structural or purely decorative SVGs lack semantic meaning and harm accessibility when read aloud.
+**Action:** Always add `aria-hidden="true"` to inline SVGs that are purely decorative, and ensure any informative SVGs have an `aria-label` and `role="img"`.
