@@ -1,0 +1,3 @@
+## 2023-10-27 - Inline SVGs in Welcome Blade Template Lack Accessibility Attributes
+**Learning:** The default inline `<svg>` elements used in the `welcome.blade.php` template lack fundamental accessibility attributes. The main Laravel logo is completely invisible to screen readers without a `role="img"` and `aria-label`, and the decorative icon SVGs create unnecessary screen reader noise because they lack `aria-hidden="true"`.
+**Action:** When adding new inline SVGs, always ensure they are classified as either informative (with `role="img"` and `aria-label`) or decorative (with `aria-hidden="true"`).
