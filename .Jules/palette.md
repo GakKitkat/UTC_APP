@@ -1,0 +1,3 @@
+## 2024-06-25 - Explicit Accessibility for Inline SVGs
+**Learning:** Screen readers may incorrectly interpret or announce inline `<svg>` elements if their purpose is not explicitly defined. It is critical to differentiate between decorative SVGs (which add visual flair but carry no essential meaning) and informative SVGs (like logos or icons that represent an action). Not doing so leads to unnecessary screen reader noise or missing information for users relying on assistive technologies.
+**Action:** Always add `aria-hidden="true"` to decorative `<svg>` elements so screen readers ignore them. For informative `<svg>` elements, explicitly set `role="img"` and provide a descriptive `aria-label` so their meaning is conveyed correctly.
