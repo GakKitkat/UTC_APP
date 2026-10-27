@@ -1,0 +1,1 @@
+## 2024-11-20 - Missing ARIA labels on SVG icons\n**Learning:** The welcome view contains multiple inline SVGs that are mostly decorative but some are used as icons next to links. They should have aria-hidden="true" to prevent screen reader confusion since the adjacent links provide the context.\n**Action:** Add aria-hidden="true" to all decorative SVGs in welcome.blade.php.
